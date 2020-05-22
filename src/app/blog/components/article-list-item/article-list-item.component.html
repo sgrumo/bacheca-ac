@@ -1,0 +1,9 @@
+<div class="card" (click)="onClick()">
+    <img class="card-img-top" [src]="article.photo" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{article.title}}</h5>
+        <small>{{article.author}}</small>
+        <p class="card-text">{{article.text.length > 25 ? (article.text | slice:0:24) + '...' : article.text}}</p>
+        <a [routerLink]="['/blog/', article.id]" routerLinkActive class="btn btn-primary">Continua a leggere!</a>
+    </div>
+</div>

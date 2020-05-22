@@ -1,0 +1,6 @@
+<ng-container *ngIf="article$ | async as article">
+    <img [src]="article.photo" />
+    <h3>{{article.title}}</h3>
+    <h5>Autore: {{article.author}}</h5>
+    <p>{{article.text}}</p>
+</ng-container>
